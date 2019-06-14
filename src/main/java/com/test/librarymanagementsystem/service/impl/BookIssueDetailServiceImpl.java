@@ -149,7 +149,8 @@ public class BookIssueDetailServiceImpl implements BookIssueDetailService {
             }
         }
 
-        Query query = entityManager.createNativeQuery (searchQuery.toString()).unwrap(org.hibernate.SQLQuery.class).setResultTransformer(Transformers.aliasToBean(BookIssueDTO.class));
+        //Query query = entityManager.createNativeQuery (searchQuery.toString()).unwrap(org.hibernate.SQLQuery.class).setResultTransformer(Transformers.aliasToBean(BookIssueDTO.class));
+        Query query = entityManager.createNativeQuery (searchQuery.toString(),BookIssueDTO.class);
         Query totalCountQuery = entityManager.createNativeQuery (countQuery.toString());
 
         query.setFirstResult((pageNo-1)*pageSize);
