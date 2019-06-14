@@ -1,16 +1,20 @@
 package com.test.librarymanagementsystem.model;
 
 import com.test.librarymanagementsystem.constant.DBConstant;
-import org.hibernate.validator.constraints.Length;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table(name="user")
-public class User {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,7 +41,7 @@ public class User {
     private String userPass;
 
 
-    @Length(min=DBConstant.SIZE_FIVE,max = DBConstant.SIZE_FOURY_FIVE)
+    //@Length(min=DBConstant.SIZE_FIVE,max = DBConstant.SIZE_FOURY_FIVE)
     @Column(name="email",unique = true,nullable = false,length = DBConstant.SIZE_FOURY_FIVE)
     private String email;
 
@@ -48,16 +52,16 @@ public class User {
     private List<Role> roles;
 
     @Column(name="enabled")
-    private boolean enabled;
+    private boolean enabled=true;
 
     @Column(name="account_expired")
-    private boolean accountExpired;
+    private boolean accountExpired=false;
 
     @Column(name="credentials_expired")
-    private boolean credentialsExpired;
+    private boolean credentialsExpired=false;
 
     @Column(name="account_locked")
-    private boolean accountLocked;
+    private boolean accountLocked=false;
 
     public String getUserName() {
         return userName;
@@ -77,6 +81,45 @@ public class User {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public List<Role> getRoles() {
+        return this.roles;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+
+        getRoles().stream().forEach(role->{
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
+        });
+        return grantedAuthorities;
+    }
+
+    @Override
+    public String getPassword() {
+        return getUserPass();
+    }
+
+    @Override
+    public String getUsername() {
+        return getUserName();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return !accountExpired;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return !accountLocked;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return !credentialsExpired;
     }
 
     public boolean isEnabled() {

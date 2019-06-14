@@ -12,7 +12,6 @@ spring:
     hikari:
       data-source-properties:
         maximumPoolSize: 30
-        minPoolSize: 05
         cachePrepStmts: true
         prepStmtCacheSize: 100
         prepStmtCacheSqlLimit: 2048
@@ -20,5 +19,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-     ddl-auto: update
+      ddl-auto: update
     show-sql: true
+
+
