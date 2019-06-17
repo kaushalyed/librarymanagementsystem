@@ -25,9 +25,10 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(HttpSecurity http) throws Exception {
         http.
                 authorizeRequests()
-                .antMatchers("/", "/login").permitAll()
+                .antMatchers("/","/**").permitAll();
+                /*.antMatchers("/", "/login").permitAll()
                 .antMatchers("/oauth/token").permitAll()
-                .antMatchers("/home","/test","/users", "/authors", "/books").hasRole("Admin")
+                .antMatchers("/home","/test","/users/**", "/authors", "/books").hasRole("Admin")
                 .antMatchers("/home","/test","/books", "/authors").access("hasRole('User')")
                 .anyRequest().authenticated().and()
                 .csrf().disable()
@@ -36,7 +37,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .failureUrl("/login?error=true")
                 .defaultSuccessUrl("/home")
                 .and()
-                .logout().permitAll();
+                .logout().permitAll();*/
         //.logoutRequestMatcher(new AntPathRequestMatcher("/logout.jsp"))
         //.logoutSuccessUrl("/");
     }

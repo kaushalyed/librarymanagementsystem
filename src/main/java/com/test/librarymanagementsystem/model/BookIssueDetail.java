@@ -2,12 +2,32 @@ package com.test.librarymanagementsystem.model;
 
 import javax.persistence.*;
 
+import com.test.librarymanagementsystem.dto.response.BookIssueDTO;
+
 import java.util.Date;
 
 import static javax.persistence.TemporalType.DATE;
 
 @Entity
 @Table(name="book_issue_details")
+@SqlResultSetMapping(
+		name="BookIssueSearchMapping",
+				classes={
+	                    @ConstructorResult(
+	                        targetClass=BookIssueDTO.class,
+	                           columns = {
+	                                   @ColumnResult(name="bookIssueId",type=Long.class),
+	                                   @ColumnResult(name="expectedReturnDate"),
+                                       @ColumnResult(name="issueDate"),
+                                       @ColumnResult(name="bookName"),
+                                       @ColumnResult(name="authorName"),
+                                       @ColumnResult(name="userFirstName"),
+                                       @ColumnResult(name="userLastName")
+	                           }
+
+	                    )
+	                }
+		)
 public class BookIssueDetail {
 
     @Id

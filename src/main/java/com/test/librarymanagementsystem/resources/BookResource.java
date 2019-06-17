@@ -60,5 +60,25 @@ public class BookResource {
         }
         return new ResponseEntity(responseMap, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    @RequestMapping("/books/name")
+    public ResponseEntity getBook(){
+        Map<String,Object> responseMap = new HashMap<>();
+        try{
+            responseMap.put("bookNames",bookService.getBookNames());
+        }catch (Exception e){
+            responseMap.put("errorMsg",e.getMessage());
+        }
+        return new ResponseEntity(responseMap, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    @RequestMapping("/books/count")
+    public ResponseEntity getBookCount(){
+        Map<String,Object> responseMap = new HashMap<>();
+        try{
+            responseMap.put("bookCount",bookService.getTotalBookCount());
+        }catch (Exception e){
+            responseMap.put("errorMsg",e.getMessage());
+        }
+        return new ResponseEntity(responseMap, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
 }

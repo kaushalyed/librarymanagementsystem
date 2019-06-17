@@ -1,0 +1,168 @@
+-- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
+--
+-- Host: localhost    Database: lms
+-- ------------------------------------------------------
+-- Server version	8.0.15
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Dumping data for table `author`
+--
+
+LOCK TABLES `author` WRITE;
+/*!40000 ALTER TABLE `author` DISABLE KEYS */;
+INSERT INTO `author` VALUES (8,'Ramakrishna'),(9,'Dindayal');
+/*!40000 ALTER TABLE `author` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `author_books`
+--
+
+LOCK TABLES `author_books` WRITE;
+/*!40000 ALTER TABLE `author_books` DISABLE KEYS */;
+INSERT INTO `author_books` VALUES (8,10),(8,11),(8,21),(8,22),(9,12),(9,20),(9,23),(9,24);
+/*!40000 ALTER TABLE `author_books` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `book`
+--
+
+LOCK TABLES `book` WRITE;
+/*!40000 ALTER TABLE `book` DISABLE KEYS */;
+INSERT INTO `book` VALUES (10,'Mrutunjay',300,'2019-06-01 00:00:00','Mrutunjay',8,50,50),(11,'Shyamchi Aai',225,'2019-05-01 00:00:00','Shyamchi Aai',8,100,100),(12,'Shala',250,'2019-05-01 00:00:00','Shala',9,100,100),(20,'Success Mantra',250,'2019-05-01 00:00:00','SuccessMantra',9,10,10),(21,'Believe In YourSelf',250,'2019-05-01 00:00:00','Believe In YourSelf',8,9,10),(22,'Harry Porter',250,'2019-05-01 00:00:00','Harry Porter',8,9,10),(23,'The Power of Positive Thinking',250,'2019-05-01 00:00:00','The Power of Positive Thinking',9,9,10),(24,'Chanakya',250,'2019-05-01 00:00:00','Chanakya',9,9,10);
+/*!40000 ALTER TABLE `book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `book_issue_details`
+--
+
+LOCK TABLES `book_issue_details` WRITE;
+/*!40000 ALTER TABLE `book_issue_details` DISABLE KEYS */;
+INSERT INTO `book_issue_details` VALUES (13,'2019-06-20','2019-06-11','2019-06-11',_binary '',10,7),(17,'2019-06-20','2019-06-05',NULL,_binary '\0',11,7),(19,'2019-06-20','2019-06-05',NULL,_binary '\0',12,6),(25,'2019-06-20','2019-06-05',NULL,_binary '\0',20,7),(26,'2019-06-20','2019-06-05','2019-06-11',_binary '',21,7),(27,'2019-06-20','2019-06-05','2019-06-11',_binary '',21,7),(30,'2019-06-20','2019-06-05',NULL,_binary '\0',21,6),(31,'2019-06-20','2019-06-05',NULL,_binary '\0',22,6),(32,'2019-06-20','2019-06-05',NULL,_binary '\0',23,6),(33,'2019-06-20','2019-06-05',NULL,_binary '\0',24,6);
+/*!40000 ALTER TABLE `book_issue_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `hibernate_sequence`
+--
+
+LOCK TABLES `hibernate_sequence` WRITE;
+/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
+INSERT INTO `hibernate_sequence` VALUES (35),(35),(35);
+/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_access_token`
+--
+
+LOCK TABLES `oauth_access_token` WRITE;
+/*!40000 ALTER TABLE `oauth_access_token` DISABLE KEYS */;
+INSERT INTO `oauth_access_token` VALUES ('eb2dbab1ef44fbe5e866cabdd1e37c75',_binary '¨\Ì\0sr\0Corg.springframework.security.oauth2.common.DefaultOAuth2AccessToken≤û6$˙\Œ\0L\0additionalInformationt\0Ljava/util/Map;L\0\nexpirationt\0Ljava/util/Date;L\0refreshTokent\0?Lorg/springframework/security/oauth2/common/OAuth2RefreshToken;L\0scopet\0Ljava/util/Set;L\0	tokenTypet\0Ljava/lang/String;L\0valueq\0~\0xpsr\0java.util.Collections$EmptyMapY6ÖZ\‹\Á\–\0\0xpsr\0java.util.DatehjÅKYt\0\0xpw\0\0k_\÷Cüxsr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationq\0~\0xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valueq\0~\0xpt\0$d68d76fa-8731-4ef9-84f4-a08b131b4ce1sq\0~\0	w\0\0k`7\Îöxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0ct\0Ljava/util/Collection;xpsr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExt\0bearert\0$73f12dd2-162f-454f-8584-74801c37d8f9','835536bc4b45fd081eb84ccafdd3ff09','dilip','mobile',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Adminxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0dilipxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0kaushalyedilip@gmail.comt\0Dilipsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0t\0Ksr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0dilipt\0D{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq','ebc4f762dc70d34e4e942383cb1e02b1'),('f01cc12445346e9cac45b5a043b6fdaf',_binary '¨\Ì\0sr\0Corg.springframework.security.oauth2.common.DefaultOAuth2AccessToken≤û6$˙\Œ\0L\0additionalInformationt\0Ljava/util/Map;L\0\nexpirationt\0Ljava/util/Date;L\0refreshTokent\0?Lorg/springframework/security/oauth2/common/OAuth2RefreshToken;L\0scopet\0Ljava/util/Set;L\0	tokenTypet\0Ljava/lang/String;L\0valueq\0~\0xpsr\0java.util.Collections$EmptyMapY6ÖZ\‹\Á\–\0\0xpsr\0java.util.DatehjÅKYt\0\0xpw\0\0kUL˛\‘xsr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationq\0~\0xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valueq\0~\0xpt\0$ba5a44f2-484b-4b47-8b4a-babde039647asq\0~\0	w\0\0kUU]∏xsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0ct\0Ljava/util/Collection;xpsr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExt\0bearert\0$407f1e3c-8946-4417-a46c-fd4323482595','a12e6eac16216fad3038529d2963f089','sachin','mobile',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Userxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0sachinxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0sachin@gmail.comt\0Sachinsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0t\0Kalesr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0sachint\0D{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq','fffcd61c26cd89693caba8f448a0ae79'),('fd098670023de4a2c45a114def0a0946',_binary '¨\Ì\0sr\0Corg.springframework.security.oauth2.common.DefaultOAuth2AccessToken≤û6$˙\Œ\0L\0additionalInformationt\0Ljava/util/Map;L\0\nexpirationt\0Ljava/util/Date;L\0refreshTokent\0?Lorg/springframework/security/oauth2/common/OAuth2RefreshToken;L\0scopet\0Ljava/util/Set;L\0	tokenTypet\0Ljava/lang/String;L\0valueq\0~\0xpsr\0java.util.Collections$EmptyMapY6ÖZ\‹\Á\–\0\0xpsr\0java.util.DatehjÅKYt\0\0xpw\0\0k_Ä9txsr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationq\0~\0xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valueq\0~\0xpt\0$775e2db2-e388-42be-a28b-bed9cce148fasq\0~\0	w\0\0k_\·\·oxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0ct\0Ljava/util/Collection;xpsr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExt\0bearert\0$d6ff6f79-1acc-4cac-b00b-8cc28280cf0e','fcd3e0d3daf0c0389b23c955b3a82d64','nitin','mobile',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Adminxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0nitinxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0nitin@gmail.comt\0Nitinsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0\"t\0Desaisr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0nitint\0D{bcrypt}$2a$10$VXBkUmOs/wfupgetKimsYu7bUJSopa6uYQAUG3HTt.vOM4wk25tLy','41421ac0457e76da70bcd09e8792542a');
+/*!40000 ALTER TABLE `oauth_access_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_approvals`
+--
+
+LOCK TABLES `oauth_approvals` WRITE;
+/*!40000 ALTER TABLE `oauth_approvals` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_approvals` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_client_details`
+--
+
+LOCK TABLES `oauth_client_details` WRITE;
+/*!40000 ALTER TABLE `oauth_client_details` DISABLE KEYS */;
+INSERT INTO `oauth_client_details` VALUES ('mobile','{bcrypt}$2a$10$gPhlXZfms0EpNHX0.HHptOhoFD1AoxSr/yUIdTqA8vtjeP4zi0DDu','http://localhost:8082/code','READ,WRITE',3600,10000,'lms','authorization_code,password,refresh_token,implicit',NULL,'{}',NULL);
+/*!40000 ALTER TABLE `oauth_client_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_client_token`
+--
+
+LOCK TABLES `oauth_client_token` WRITE;
+/*!40000 ALTER TABLE `oauth_client_token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_client_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_code`
+--
+
+LOCK TABLES `oauth_code` WRITE;
+/*!40000 ALTER TABLE `oauth_code` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `oauth_refresh_token`
+--
+
+LOCK TABLES `oauth_refresh_token` WRITE;
+/*!40000 ALTER TABLE `oauth_refresh_token` DISABLE KEYS */;
+INSERT INTO `oauth_refresh_token` VALUES ('fffcd61c26cd89693caba8f448a0ae79',_binary '¨\Ì\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valuet\0Ljava/lang/String;xpt\0$ba5a44f2-484b-4b47-8b4a-babde039647asr\0java.util.DatehjÅKYt\0\0xpw\0\0kUU]∏x',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Userxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0sachinxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0sachin@gmail.comt\0Sachinsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0t\0Kalesr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0sachint\0D{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq'),('41421ac0457e76da70bcd09e8792542a',_binary '¨\Ì\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valuet\0Ljava/lang/String;xpt\0$775e2db2-e388-42be-a28b-bed9cce148fasr\0java.util.DatehjÅKYt\0\0xpw\0\0k_\·\·ox',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Adminxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0nitinxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0nitin@gmail.comt\0Nitinsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0\"t\0Desaisr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0nitint\0D{bcrypt}$2a$10$VXBkUmOs/wfupgetKimsYu7bUJSopa6uYQAUG3HTt.vOM4wk25tLy'),('ebc4f762dc70d34e4e942383cb1e02b1',_binary '¨\Ì\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valuet\0Ljava/lang/String;xpt\0$d68d76fa-8731-4ef9-84f4-a08b131b4ce1sr\0java.util.DatehjÅKYt\0\0xpw\0\0k`7\Îöx',_binary '¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0Adminxq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0dilipxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\Z?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0#w\0\0\0?@\0\0\0\0\0t\0lmsxsq\0~\0#w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0xq\0~\0/sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\Z?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0x\0psr\0+com.test.librarymanagementsystem.model.User\‚\ÏÑç&Ò\0Z\0accountExpiredZ\0\raccountLockedZ\0credentialsExpiredZ\0enabledL\0emailq\0~\0L\0	firstNameq\0~\0L\0idt\0Ljava/lang/Long;L\0lastNameq\0~\0L\0rolesq\0~\0L\0userNameq\0~\0L\0userPassq\0~\0xp\0\0\0t\0kaushalyedilip@gmail.comt\0Dilipsr\0java.lang.Long;ã\‰êÃè#\ﬂ\0J\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0\0\0\0\0t\0Ksr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollection@,¯\rX\’RÚ\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0=xp\0ˇˇˇˇ\0\0\0q\0~\09q\0~\04t\01com.test.librarymanagementsystem.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0+com.test.librarymanagementsystem.model.RoleÂñ§Ò%çKl\0L\0idq\0~\03L\0nameq\0~\0xpsq\0~\07\0\0\0\0\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Bxt\0dilipt\0D{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq');
+/*!40000 ALTER TABLE `oauth_refresh_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `role`
+--
+
+LOCK TABLES `role` WRITE;
+/*!40000 ALTER TABLE `role` DISABLE KEYS */;
+INSERT INTO `role` VALUES (1,'Admin'),(2,'User');
+/*!40000 ALTER TABLE `role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (6,'kaushalyedilip@gmail.com','Dilip','K',_binary '\0',_binary '\0',_binary '\0',_binary '','dilip','{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq'),(7,'sachin@gmail.com','Sachin','Kale',_binary '\0',_binary '\0',_binary '\0',_binary '','sachin','{bcrypt}$2a$10$axcY/sfMy.QpylWD.WCVaeKIzLJMD6N7z2oPttbAXBcxsW5QibUPq'),(29,'sachinyadav@gmail.com','Sachin','Yadav',_binary '\0',_binary '\0',_binary '\0',_binary '','sachiny','sachin'),(34,'nitin@gmail.com','Nitin','Desai',_binary '\0',_binary '\0',_binary '\0',_binary '','nitin','{bcrypt}$2a$10$VXBkUmOs/wfupgetKimsYu7bUJSopa6uYQAUG3HTt.vOM4wk25tLy');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `user_role`
+--
+
+LOCK TABLES `user_role` WRITE;
+/*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
+INSERT INTO `user_role` VALUES (7,2),(6,1),(29,2),(34,1);
+/*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping events for database 'lms'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-06-17  9:09:26

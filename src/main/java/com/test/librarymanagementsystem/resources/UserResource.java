@@ -1,7 +1,5 @@
 package com.test.librarymanagementsystem.resources;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.test.librarymanagementsystem.model.Role;
 import com.test.librarymanagementsystem.model.User;
 import com.test.librarymanagementsystem.service.RoleService;
@@ -13,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
 
 import java.util.HashMap;
 import java.util.List;
@@ -33,17 +30,17 @@ public class UserResource {
     @RequestMapping("/login")
     String login(){
         /*return  new ModelAndView("home");*/
-        return "login.jsp";
+        return "login";
     }
     @RequestMapping("/home")
     String homePage(){
         /*return  new ModelAndView("home");*/
-        return "home.jsp";
+        return "home";
     }
     @RequestMapping("/create-user")
     String createUser(){
         /*return  new ModelAndView("home");*/
-        return "create-user.jsp";
+        return "create-user";
     }
 
     @RequestMapping(value = "/users",method = RequestMethod.POST)

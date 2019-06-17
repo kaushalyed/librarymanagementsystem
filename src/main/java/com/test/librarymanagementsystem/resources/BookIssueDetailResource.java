@@ -73,5 +73,15 @@ public class BookIssueDetailResource {
         }
         return new ResponseEntity(responseMap, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    @RequestMapping("/issuedbooks/asynchronous")
+    public ResponseEntity searchBookIssueAsynchronous(){
+        Map<String,Object> responseMap = new HashMap<>();
+        try{
+            responseMap.put("issuedBooks",bookIssueDetailService.getIssuedBookAsynchronousUseCase());
+        }catch (Exception e){
+            responseMap.put("errorMsg",e.getMessage());
+        }
+        return new ResponseEntity(responseMap, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
 }

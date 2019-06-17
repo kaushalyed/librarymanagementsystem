@@ -11,6 +11,23 @@ public class BookIssueDTO {
     private String authorName;
     private String userFirstName;
     private String userLastName;
+
+    public BookIssueDTO() {
+    }
+    public BookIssueDTO(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public BookIssueDTO(Long bookIssueId,Date expectedReturnDate,Date issueDate,String bookName, String authorName, String userFirstName, String userLastName) {
+        this.bookIssueId = bookIssueId;
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.issueDate = issueDate;
+        this.expectedReturnDate = expectedReturnDate;
+    }
+
     @Temporal(TemporalType.DATE)
     private Date issueDate;
     @Temporal(TemporalType.DATE)

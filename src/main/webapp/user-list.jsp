@@ -1,10 +1,29 @@
 <html>
 <head>
-<link rel="stylesheet" href="jqGrid-4.7.0/css/ui.jqgrid.css" type="text/css" />
+<style>
+#user-list {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  	<script type="text/javascript" src="jqGrid-5.2.1/jquery.jqGrid.js"></script>
-    <script type="text/javascript" src="jqGrid-5.2.1/grid.locale-en.js"></script>
-    <script type="text/javascript" src="jqGrid-5.2.1/jszip.min.js"></script>
+#user-list td, #user-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#user-list tr:nth-child(even){background-color: #f2f2f2;}
+
+#user-list tr:hover {background-color: #ddd;}
+
+#user-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -14,81 +33,30 @@
             url: 'http://localhost:8082/users',
             dataType: "json",
             success: function(response) {
+              var userList = response.users;
+                  jQuery.each(userList, function(i,data) {
+                        var role='';
+                        jQuery.each(data.roles, function(i,data) {
+                          role+= data.name+',' ;
+                        });
+                        role = role.replace(/,\s*$/, "");
 
-                loadUsersListGrid(response);
+                      $("#user-table").append("<tr><td>" + data.userName + "</td><td>" + data.firstName + "  "+data.lastName+"</td><td>" + data.email + "</td><td>" + role + "</td></tr>");
+                  });
             }
           });
         });
-
-        function loadUsersListGrid(data){
-
-        	//$.jgrid.gridUnload("#users-list-table");
-        	//$("#users-list-table").trigger("reloadGrid");
-
-        	/*grid starts from here*/
-        	$("#users-list-table").jqGrid({
-        		data :data,
-        	    colNames: ['User Name', 'First Name','Last Name', 'Role', 'Email'],
-        	    colModel: [
-        				   {
-        				        name: 'userName',
-        				        index: 'userName',
-        				        width: 70,
-        				        sortable: false,
-        				        resizable:false},
-        				    {
-        				        name: 'firstName',
-        				        index: 'firstName',
-        				        sortable: false,
-        				        width: 50},
-        				    {
-        				        name: 'lastName',
-        				        index: 'lastName',
-        				        sortable: false,
-        				        resizable:false,
-        				        width: 50},
-        				     /*{
-        				        name: 'role',
-        				        index: 'role',
-        				        sortable: false,
-        				        resizable:false,
-        				        width: 60},*/
-        			        {
-        				        name: 'email',
-        				        index: 'email',
-        				        resizable:false,
-        				        sortable: false},
-
-        	    ],
-        	    loadonce: true,
-        		reloadAfterSubmit:true,
-        	    multiselect: true,
-        	    multiboxonly: true,
-        	    rowNum: 30,
-        	    height: '90%',
-        		rownumWidth:50
-        	});
-
-        	//jQuery("#users-list-table").jqGrid('navGrid','',{edit:false,add:false,del:false});
-
-        	/*This search filter is user for custom search. Loaded in loadComplete()*/
-        	//$("#users-list-table").jqGrid('filterToolbar', {defaultSearch : "cn"});
-
-        }
-
-
-
         </script>
 </head>
 
 <body>
+<h1>User List</h1>
 <div class="panel-body" id="user-list">
-					<!-- All Users List Grid -->
-					<div class="panel-body" id="users-grid">
-						<table id="users-list-table"></table>
-						<div id="users-list-grid-pager"></div>
-					</div>
-				</div>
+		<!-- All Users List Grid -->
+        <table id="user-table">
+        <tr><th>User Id</th><th>User Name</th><th>Email</th><th>Role</th></tr>
+		</table>
+</div>
 </body>
 
 </html>

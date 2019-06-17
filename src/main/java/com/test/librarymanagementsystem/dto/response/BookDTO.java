@@ -1,45 +1,15 @@
-package com.test.librarymanagementsystem.model;
+package com.test.librarymanagementsystem.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.*;
+import javax.persistence.Temporal;
 import java.util.Date;
 
-import static javax.persistence.TemporalType.DATE;
+import static java.util.Calendar.DATE;
 
-@Entity
-@Table(name="book")
-public class Book {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
-    @Column
-    private String name;
-
-    @Column
-    private String title;
-
-    @Column
-    private Integer pages;
-
-    @JsonFormat(pattern="dd-MMM-yyyy")
-    @Temporal(DATE)
-    @Column(name="publish_date")
-    private Date publishDate;
-
-    @Column(name="total_quantity")
-    private Integer totalQuantity;
-
-    @Column(name="available_quantity")
-    private Integer availableQuantity;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="author_id")
-    @JsonIgnore
-    private Author author;
+public class BookDTO {
+        private Long id;
+        private String name;
+        private String title;
+        private Integer pages;
 
     public Long getId() {
         return id;
@@ -81,14 +51,6 @@ public class Book {
         this.publishDate = publishDate;
     }
 
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
     public Integer getTotalQuantity() {
         return totalQuantity;
     }
@@ -104,4 +66,10 @@ public class Book {
     public void setAvailableQuantity(Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
     }
+
+    private Date publishDate;
+        private Integer totalQuantity;
+        private Integer availableQuantity;
+
+
 }

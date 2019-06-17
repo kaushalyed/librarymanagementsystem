@@ -3,15 +3,15 @@ package com.test.librarymanagementsystem.dto.response;
 import java.util.List;
 
 public class BookIssueResponse{
-    private List<BookIssueDTO> bookIssues;
+    private List<BookIssueDTO> bookIssueDTOs;
     private Long totalCount=0l;
 
-    public List<BookIssueDTO> getBookIssues() {
-        return bookIssues;
+    public List<BookIssueDTO> getBookIssueDTOs() {
+        return bookIssueDTOs;
     }
 
-    public void setBookIssues(List<BookIssueDTO> bookIssues) {
-        this.bookIssues = bookIssues;
+    public void setBookIssueDTOs(List<BookIssueDTO> bookIssueDTOs) {
+        this.bookIssueDTOs = bookIssueDTOs;
     }
 
     public Long getTotalCount() {
