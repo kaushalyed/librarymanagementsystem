@@ -25,11 +25,13 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(HttpSecurity http) throws Exception {
         http.
                 authorizeRequests()
-                .antMatchers("/","/**").permitAll();
-                /*.antMatchers("/", "/login").permitAll()
+                /*.antMatchers("/","/**").permitAll();*/
+                .antMatchers("/", "/login").permitAll()
                 .antMatchers("/oauth/token").permitAll()
-                .antMatchers("/home","/test","/users/**", "/authors", "/books").hasRole("Admin")
-                .antMatchers("/home","/test","/books", "/authors").access("hasRole('User')")
+                //.antMatchers("/home","/users/**","/authors/**","/books/**").hasAuthority("Admin")
+                //.antMatchers("/home", "/authors/**").hasAuthority("User")
+                .antMatchers("/home","/users/**","/book-transaction/**").access("hasAuthority('Admin')")
+                .antMatchers("/home", "/authors/**","/books/**").hasAnyAuthority("Admin","User")
                 .anyRequest().authenticated().and()
                 .csrf().disable()
                 .formLogin().loginPage("/login")
@@ -37,7 +39,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .failureUrl("/login?error=true")
                 .defaultSuccessUrl("/home")
                 .and()
-                .logout().permitAll();*/
+                .logout().permitAll();
         //.logoutRequestMatcher(new AntPathRequestMatcher("/logout.jsp"))
         //.logoutSuccessUrl("/");
     }

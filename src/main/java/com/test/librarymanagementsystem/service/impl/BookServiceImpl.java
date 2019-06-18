@@ -71,6 +71,11 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<BookDTO> getBooks() {
         List<Book> books = bookRepository.findAll();
+
+        books.forEach(x->{
+            System.out.println("Book Name: "+x.getName()+" Author Name: "+x.getAuthor().getName());
+        });
+
         if(books!=null && books.size()>0){
             return books.stream().map(x->modelMapper.map(x,BookDTO.class)).collect(Collectors.toList());
         }

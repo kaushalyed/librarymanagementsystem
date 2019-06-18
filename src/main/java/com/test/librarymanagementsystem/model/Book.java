@@ -36,9 +36,8 @@ public class Book {
     @Column(name="available_quantity")
     private Integer availableQuantity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="author_id")
     @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     private Author author;
 
     public Long getId() {

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/book-transaction")
 public class BookIssueDetailResource {
 
       @Autowired
